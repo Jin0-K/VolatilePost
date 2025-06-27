@@ -1,24 +1,25 @@
 // Post.jsx
 import React from 'react'
+import './Post.css'
 
 function Post({ title, content, imageUrls, createdAt }) {
   const formattedTime = new Date(createdAt * 1000).toLocaleString()
 
   return (
-    <div className="bg-white shadow-md rounded-xl p-4 space-y-2">
-      <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+    <div className="Post-whole">
+      <h2 className="Post-title">{title}</h2>
 
       {imageUrls?.length > 0 && (
         <img
           src={imageUrls[0]}
           alt="post"
-          className="w-full max-h-64 object-cover rounded"
+          className="Post-image"
         />
       )}
 
-      <p className="text-gray-700">{content}</p>
+      <p className="Post-content">{content}</p>
 
-      <p className="text-sm text-gray-400">Posted: {formattedTime}</p>
+      <p className="Post-time">Posted: {formattedTime}</p>
     </div>
   )
 }
