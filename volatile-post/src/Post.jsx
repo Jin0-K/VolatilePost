@@ -2,24 +2,21 @@
 import React from 'react'
 import './Post.css'
 
-function Post({ title, content, imageUrls, createdAt }) {
+function Post({ title, content, createdAt }) {
   const formattedTime = new Date(createdAt * 1000).toLocaleString()
 
   return (
     <div className="Post-whole">
       <h2 className="Post-title">{title}</h2>
 
-      {imageUrls?.length > 0 && (
-        <img
-          src={imageUrls[0]}
-          alt="post"
-          className="Post-image"
-        />
-      )}
-
       <p className="Post-content">{content}</p>
 
-      <p className="Post-time">Posted: {formattedTime}</p>
+      <div className='Post-lifeJobs'>
+        <button className='Post-like'>Like</button>
+        <button className='Post-dislike'>Dislike</button>
+
+        <p className="Post-time">Posted: {formattedTime}</p>
+      </div>
     </div>
   )
 }

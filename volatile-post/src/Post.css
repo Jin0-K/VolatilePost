@@ -22,11 +22,8 @@
   text-overflow: ellipsis;
 }
 
-.Post-image {
-  width: 100%;
-  max-height: 120px;
-  object-fit: cover;
-  border-radius: 6px;
+.Post-lifeJobs {
+  margin: 6px 0px 0px 0px;
 }
 
 .Post-content {
@@ -35,6 +32,15 @@
   color: #444;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.Post-like {
+  padding: 4px 4px;
+  margin: 0px 4px 0px 0px;
+}
+.Post-dislike {
+  padding: 4px 4px;
+  margin: 0px 0px 0px 4px;
 }
 
 .Post-time {
