@@ -1,4 +1,4 @@
-# VolatilePost
+# Vola Note Frontend
 The post you uploaded will only last 24 hours.
 The post will contain title, text content, like and dislike buttons, and lifetime.
 Users are anonymous.
